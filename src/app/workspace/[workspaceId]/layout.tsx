@@ -1,4 +1,5 @@
 "use client";
+import Sidebar from "./sidebar";
 import Toolbar from "./toolbar";
 
 export default function WorkspaceIdLayout({
@@ -9,7 +10,10 @@ export default function WorkspaceIdLayout({
   return (
     <div className="h-full ">
       <Toolbar />
-      {children}
+      <div className="flex h-[calc(100vh-40px)]">
+        <Sidebar />
+        {children}
+      </div>
     </div>
   );
 }
